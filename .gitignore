@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# tests
+/src/setupTests.js
+/src/App.test.js
