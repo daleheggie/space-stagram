@@ -1,13 +1,18 @@
+import {MdFavorite, MdFavoriteBorder} from 'react-icons/md'
 import './ImageCard.scss'
 
-const ImageCard = ({imageObj}) => {
+const ImageCard = ({imageObj, handleLikeImage, handleDislikeImage, userLikesImage}) => {
+
     return(
-        <section class='image-card'>
-            <h1 class='image-card__title'>{imageObj.title}</h1>
-            <p class='image-card__date'>Image taken: {imageObj.date}</p>
-            <img class='image-card__image' src={`${imageObj.url}`} alt={`${imageObj.title}`}/>
-            <p class='image-card__explanation'>{imageObj.explanation}</p>
-            <button class='image-card__like-button'>Like</button>
+        <section className='image-card'>
+            <h1 className='image-card__title'>{imageObj.title}</h1>
+            <img className='image-card__image' src={`${imageObj.url}`} alt={`${imageObj.title}`}/>
+            <p className='image-card__date'>Image taken: {imageObj.date}</p>
+            <p className='image-card__explanation'>{imageObj.explanation}</p>
+            {/* If a user has liked an image, show the favourite button, otherwise show the like button */}
+            {userLikesImage === true
+            ? <button className='image-card__button' onClick={() => handleDislikeImage(imageObj.url)}><MdFavorite /></button>
+            : <button className='image-card__button' onClick={() => handleLikeImage(imageObj.url)}><MdFavoriteBorder/></button>}
         </section>
     );
 }

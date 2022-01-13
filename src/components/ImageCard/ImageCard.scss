@@ -1,8 +1,28 @@
 .image-card {
-    &__title {
-        
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &__image {
         width: 100%;
+        max-width: 500px;
+        max-height: 350px;
+        align-self: center;
+        border-radius: 10px;
     }
+
+    &__title {
+        margin-top: 0;
+        max-width: 75%;
+    }
+
+    &__button {
+        width: 60px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }

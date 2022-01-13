@@ -1,0 +1,60 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.image-slider{
+    position: relative;
+    width: 100%;
+    margin: 0 auto; 
+
+    &__image {
+        position: absolute;
+
+        &--inactive {
+            display: none;
+        }
+    }
+
+    &__next-arrow{
+        position: absolute;
+        right: 10%;
+        font-size: 1rem;    
+        @include tablet {
+            top: 150px;
+            right: -5%;
+            font-size: 2rem;
+        }
+    }
+
+    &__back-arrow{
+        position: absolute;
+        left: 10%;
+        font-size: 1rem;
+        @include tablet {
+            top: 150px;
+            left: -5%;
+            font-size: 2rem;
+        }
+    }
+
+    &__to-start-arrow{
+        position: absolute;
+        left: 2%;
+        font-size: 1rem;
+        @include tablet {
+            top: 150px;
+            left: -10%;
+            font-size: 2rem;
+        }
+    }
+
+    &__to-end-arrow{
+        position: absolute;
+        right: 2%;
+        font-size: 1rem;
+        @include tablet {
+            top: 150px;
+            right: -10%;
+            font-size: 2rem;
+        }
+    }
+}
