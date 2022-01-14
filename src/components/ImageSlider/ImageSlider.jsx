@@ -27,12 +27,11 @@ const ImageSlider = ({imageData, handleLikeImage, handleDislikeImage, usersLikes
             <BiArrowToLeft className='image-slider__to-start-arrow' onClick={firstImage}/>
             <BiArrowToRight className='image-slider__to-end-arrow' onClick={lastImage}/>             
             {imageData.map((image, index) => {
-                return (index === current && (<ImageCard   className={index === current ? 'image-slider__image' : 'image-slider__image--inactive'}
-                                                            key = {index} 
-                                                            imageObj = {image} 
-                                                            handleLikeImage = {handleLikeImage}
-                                                            handleDislikeImage = {handleDislikeImage} 
-                                                            userLikesImage = {usersLikes.includes(image.url)}/>));
+                return (index === current && <ImageCard  key = {index} 
+                                                        imageObj = {image} 
+                                                        handleLikeImage = {handleLikeImage}
+                                                        handleDislikeImage = {handleDislikeImage} 
+                                                        userLikesImage = {usersLikes.includes(image.url)}/>);
             })}
         </section>
     );

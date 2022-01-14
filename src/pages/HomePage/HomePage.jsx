@@ -15,6 +15,11 @@ class HomePage extends Component {
 
     componentDidMount = () => {
         let query = `count=${this.state.count}`
+
+        if (localStorage.getItem('spacestagramLikes')){
+            this.setState({likesArray: localStorage.getItem('spacestagramLikes').split(',')})
+        }
+
         axios
             .get(`${API_URL}?api_key=${API_KEY}&${query}`)
             .then(res => {
@@ -23,6 +28,17 @@ class HomePage extends Component {
             .catch(error => {
                 console.log(error)
             })
+    }
+
+    componentDidUpdate(_prevProps, prevState) {
+        if (prevState.likesArray !== this.state.likesArray) {
+            // If the likesArray is not empty, save in local storage, otherwise remove
+            if (this.state.likesArray.length > 0){
+                localStorage.setItem('spacestagramLikes', this.state.likesArray)
+            } else {
+                localStorage.removeItem('spacestagramLikes')
+            }
+        }
     }
 
     handleLikeImage = (imageId) => {

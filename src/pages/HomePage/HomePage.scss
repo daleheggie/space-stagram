@@ -1,6 +1,12 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 .home-page{
     padding: 0 24px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    @include tablet {
+        padding: 0 36px;
+    }
 }

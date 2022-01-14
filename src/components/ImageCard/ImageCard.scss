@@ -1,15 +1,31 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
 .image-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 8px;
+    
+    @include tablet {
+        padding: auto 32px;
+    }
 
     &__image {
         width: 100%;
+        height: auto;
         max-width: 500px;
         max-height: 350px;
         align-self: center;
         border-radius: 10px;
+            @include tablet {
+                max-height: none;
+                max-width: 600px;
+                width: auto;
+            }
     }
 
     &__title {
