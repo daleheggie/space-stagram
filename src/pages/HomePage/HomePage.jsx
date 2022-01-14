@@ -52,6 +52,19 @@ class HomePage extends Component {
         this.setState({likesArray: filteredLikesArray})
     }
 
+    refreshImages = () => {
+        let query = `count=${this.state.count}`
+        
+        axios
+            .get(`${API_URL}?api_key=${API_KEY}&${query}`)
+            .then(res => {
+                this.setState({imageData: res.data})
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
     render() {
         return(
             <main className='home-page'>
@@ -62,6 +75,7 @@ class HomePage extends Component {
                                     handleLikeImage = {this.handleLikeImage}
                                     handleDislikeImage = {this.handleDislikeImage} 
                                     usersLikes = {this.state.likesArray}/>}
+                <button className='home-page__refresh-button' onClick={this.refreshImages}>Get different images</button>
             </main>
         );
     }

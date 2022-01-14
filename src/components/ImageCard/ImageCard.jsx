@@ -9,7 +9,7 @@ const ImageCard = ({imageObj, handleLikeImage, handleDislikeImage, userLikesImag
             <img className='image-card__image' src={`${imageObj.url}`} alt={`${imageObj.title}`}/>
             <p className='image-card__date'>Image taken: {imageObj.date}</p>
             <p className='image-card__explanation'>{imageObj.explanation}</p>
-            {/* If a user has liked an image, show the favourite button, otherwise show the like button */}
+            {/* Button indicates if a user has 'liked' an image */}
             {userLikesImage === true
             ? <button className='image-card__button' onClick={() => handleDislikeImage(imageObj.url)}><MdFavorite /></button>
             : <button className='image-card__button' onClick={() => handleLikeImage(imageObj.url)}><MdFavoriteBorder/></button>}
