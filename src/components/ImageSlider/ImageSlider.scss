@@ -22,7 +22,7 @@
 
     &__next-arrow{
         position: absolute;
-        top: 8px;
+        top: 18px;
         right: 10%;
         font-size: 1rem;   
         z-index: 10; 
@@ -35,7 +35,7 @@
 
     &__back-arrow{
         position: absolute;
-        top: 8px;
+        top: 18px;
         left: 10%;
         font-size: 1rem;
         z-index: 10;
@@ -48,7 +48,7 @@
 
     &__to-start-arrow{
         position: absolute;
-        top: 8px;
+        top: 18px;
         left: 2%;
         font-size: 1rem;
         z-index: 10;
@@ -62,7 +62,7 @@
 
     &__to-end-arrow{
         position: absolute;
-        top: 8px;
+        top: 18px;
         right: 2%;
         font-size: 1rem;
         z-index: 10;
