@@ -15,7 +15,6 @@
         transform: translateY(20px);
 
         &--inactive {
-            display: none;
             opacity: 0;
             transition-duration: 1s ease;
         }
@@ -25,7 +24,8 @@
         position: absolute;
         top: 8px;
         right: 10%;
-        font-size: 1rem;    
+        font-size: 1rem;   
+        z-index: 10; 
         @include tablet {
             top: 225px;
             right: 10px;
@@ -38,6 +38,7 @@
         top: 8px;
         left: 10%;
         font-size: 1rem;
+        z-index: 10;
         @include tablet {
             top: 225px;
             left: 10px;
@@ -50,6 +51,7 @@
         top: 8px;
         left: 2%;
         font-size: 1rem;
+        z-index: 10;
         
         @include tablet {
             top: 225px;
@@ -63,6 +65,7 @@
         top: 8px;
         right: 2%;
         font-size: 1rem;
+        z-index: 10;
         @include tablet {
             top: 225px;
             right: -30px;

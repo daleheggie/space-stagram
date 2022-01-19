@@ -9,10 +9,20 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     padding: 8px;
+
+    opacity: 1;
+    transition-duration: 1s;
+    transform: translateY(10px);
+
+    &--inactive {
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
     
     @include tablet {
         padding: auto 32px;
     }
+    
 
     &__image {
         width: 100%;
@@ -21,11 +31,12 @@
         max-height: 350px;
         align-self: center;
         border-radius: 10px;
-            @include tablet {
-                max-height: none;
-                max-width: 600px;
-                width: auto;
-            }
+
+        @include tablet {
+            max-height: none;
+            max-width: 600px;
+            width: auto;
+        }
     }
 
     &__title {
