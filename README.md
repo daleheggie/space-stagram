@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Space-stagram app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web-app is hosted at https://spacestagram-app.herokuapp.com/
 
 ## Available Scripts
 
